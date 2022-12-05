@@ -5,6 +5,9 @@ require("@nomicfoundation/hardhat-toolbox");
 // testing the frontend.
 require("./tasks/faucet");
 
+API_ALCHEMY = "" 
+PRIV_KEY = ""
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   sources: "./contracts",
@@ -14,9 +17,8 @@ module.exports = {
       chainId: 1337 // We set 1337 to make interacting with MetaMask simpler
     },
     goerli: {
-      // url: "https://eth-goerli.alchemyapi.io/v2/amb7pP8KcyMJbE8U29p20EnujotCOK0Y",
-      url: "https://eth-goerli.g.alchemy.com/v2/amb7pP8KcyMJbE8U29p20EnujotCOK0Y",
-      accounts: ['0x06cd74d3dca4598675625a8d857f879566dae582b796473b9a5e8c33c58a9074']
+      url: "https://eth-goerli.g.alchemy.com/v2/" + API_ALCHEMY,
+      accounts: [PRIV_KEY]
     }
   },
   paths: {
